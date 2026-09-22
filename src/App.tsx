@@ -39,15 +39,17 @@ function App() {
     const trimmedContent = content.trim();
     const trimmedAuthor = author.trim();
 
-    if (!trimmedTitle || !trimmedContent || !trimmedAuthor) {
-      return;
-    }
-
     const newPost: NewPost = {
       title: trimmedTitle,
       content: trimmedContent,
       author: trimmedAuthor,
     };
+
+    if (!trimmedTitle || !trimmedContent || !trimmedAuthor) {
+      return;
+    }
+
+    
     // 과제 1-4: NewPost에 id: Date.now()를 더해 기존 배열 뒤에 새 배열로 추가하고 입력창을 비웁니다.
     const createdPost: Post = {
       ...newPost,
